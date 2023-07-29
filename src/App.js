@@ -12,6 +12,7 @@ function App() {
         <Route path="/explore"  element = {<ExplorePage/>} />
         <Route path="/watchLater"  element = {<WatchLaterPage/>} />
         <Route path="/playlist"  element = {<PlaylistPage/>} />
+        {/* <Route path="/category/:categoryId"  element = {<CategoryPage />} /> */}
       </Routes>
     </Router>
   );

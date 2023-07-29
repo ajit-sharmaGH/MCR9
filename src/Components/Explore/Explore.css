@@ -1,0 +1,16 @@
+.creator-profile{
+    height:3rem;
+    width:3rem;
+    border-radius: 50%;
+    background-size: contain;
+    margin:0.5rem 0;
+}
+.video-thumbnail{
+    height: 12rem;
+    width:100%;
+    background-size: contain;
+}
+.video-card{
+    max-width: 22rem;
+    margin: 1rem;
+}
