@@ -1,10 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import { useFilter } from "../../Context/FilterContext";
 import { videos } from "../../Data/Videos";
 import "./Explore.css";
 
 const Explore = () => {
   const { filter } = useFilter();
-
+const navigate = useNavigate();
   const applyFilter = () => {
     const { categoryName, searchQuery } = filter;
 
@@ -22,6 +23,7 @@ const Explore = () => {
   };
 
   const displayVideos = applyFilter();
+
   return (
     <div>
       {displayVideos.length === 0 ? (
@@ -33,7 +35,10 @@ const Explore = () => {
               <li key={video._id}>
                   
                 <div className="margin-1 flex-col video-card" >
-                  <img src={video.thumbnail} className="video-thumbnail" alt={"images"} />
+                  <img src={video.thumbnail} className="video-thumbnail" alt={"images"} 
+                  
+                   onClick={() => navigate(`/player/${video._id}`)}
+                   />
                   <section className="flex">
                     <div className="mr-1">
                       {" "}

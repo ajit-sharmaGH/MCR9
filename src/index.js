@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { FilterContextProvider } from './Context/FilterContext';
+import { WatchContextProvider } from './Context/WatchLaterContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <FilterContextProvider>
+      <WatchContextProvider>
     <App />
+    </WatchContextProvider>
     </FilterContextProvider>
   </React.StrictMode>
 );
